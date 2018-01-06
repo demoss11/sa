@@ -1,0 +1,80 @@
+<!DOCTYPE html >
+
+<html>
+	<head>
+		
+		<meta charset="UTF-8">
+		<title>折叠面板</title>
+		<!-- easyui依赖的jquery文件 -->
+		<script type="text/javascript" src="../js/jquery-1.8.3.js" ></script>
+		<!-- easyui的核心文件 -->
+		<script type="text/javascript" src="../js/easyui/jquery.easyui.min.js" ></script>
+		<!--  国际化语言（默认是英文的） -->
+		<script type="text/javascript" src="../js/easyui/locale/easyui-lang-zh_CN.js" ></script>
+		<!-- 默认css样式文件 -->
+		<link rel="stylesheet" href="../js/easyui/themes/default/easyui.css" />
+		<!-- 默认图标样式 -->
+		<link rel="stylesheet" href="../js/easyui/themes/icon.css" />
+		<script>
+			$(function(){
+				$("#tab1").click(function(){
+					$("#tt").tabs('add',{
+						title:'传智比克'
+						
+						})
+				})
+			})
+		</script>
+		
+	</head>
+	
+	<body class="easyui-layout"> 
+
+		<div data-options="region:'north',title:'North Title',split:true" style="height:100px;"></div> 
+		
+		<div data-options="region:'south',title:'South Title',split:true" style="height:100px;"></div> 
+		
+		<div data-options="region:'east',iconCls:'icon-reload',title:'East',split:true" style="width:100px;"></div> 
+		
+		<div data-options="region:'west',title:'菜单导航',split:true" style="width:180px;">
+			<div id="aa" class="easyui-accordion" style="width:300px;height:200px;" data-options="fit:'true'"> 
+
+				<div title="基础菜单" data-options="iconCls:'icon-save'" style="overflow:auto;padding:10px;"> 
+				
+					<a href="#" id="tab1">选项卡1</a>
+				
+				</div> 
+				
+				<div title="系统菜单" data-options="iconCls:'icon-reload',selected:true" style="padding:10px;"> 
+				
+					content2 
+				
+				</div> 
+				
+				<div title="功能菜单"> 
+				
+					content3 
+				
+				</div> 
+				
+				</div> 
+
+
+		</div> 
+		
+		<div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;">
+			<div id="tt" class="easyui-tabs" style="width:500px;height:250px;">
+			
+				<div title="Tab1" style="padding:20px;display:none;">tab1 </div>
+			
+				<div title="Tab2" data-options="closable:true" style="overflow:auto;padding:20px;display:none;">tab2 </div>
+			
+				<div title="Tab3" data-options="iconCls:'icon-reload',closable:true" style="padding:20px;display:none;">tab3 </div>
+			
+			</div>
+		</div> 
+
+	</body> 
+
+
+</html>

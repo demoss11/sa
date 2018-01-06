@@ -1,0 +1,10 @@
+com\itcast\liusong\domain\base\FixedArea.class
+com\itcast\liusong\domain\base\Area.class
+com\itcast\liusong\domain\base\Vehicle.class
+com\itcast\liusong\domain\base\Standard.class
+com\itcast\liusong\domain\base\Courier.class
+com\itcast\liusong\domain\base\SubArchive.class
+com\itcast\liusong\domain\base\TakeTime.class
+com\itcast\liusong\domain\base\Archive.class
+com\itcast\liusong\web\action\StandardAction.class
+com\itcast\liusong\domain\base\SubArea.class

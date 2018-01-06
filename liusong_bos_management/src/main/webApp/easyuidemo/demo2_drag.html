@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本拖放</title>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- easyui依赖的jquery文件 -->
+		<script type="text/javascript" src="../js/jquery-1.8.3.js" ></script>
+		<!-- easyui的核心文件 -->
+		<script type="text/javascript" src="../js/easyui/jquery.easyui.min.js" ></script>
+		<!--  国际化语言（默认是英文的） -->
+		<script type="text/javascript" src="../js/easyui/locale/easyui-lang-zh_CN.js" ></script>
+		<!-- 默认css样式文件 -->
+		<link rel="stylesheet" href="../js/easyui/themes/default/easyui.css" />
+		<!-- 默认图标样式 -->
+		<link rel="stylesheet" href="../js/easyui/themes/icon.css" />
+		<script >
+			$(function(){
+				$('#dd1').draggable();
+				$('#dd2').draggable({
+				    proxy:'clone'
+				});
+				$('#dd3').draggable({
+				    proxy:function(source){
+				        var p = $('<div class="proxy">proxy</div>');
+				        p.appendTo('body');
+				        return p;
+    }
+});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="dd1" class="dd-demo" style="border: 1; background: blueviolet;">我是矩形1</div>
+	    <div id="dd2" class="dd-demo" style="border: 1; background: blueviolet;">我是矩形2</div>
+	    <div id="dd3" class="dd-demo" style="border: 1; background: blueviolet;">我是矩形3</div>
+		
+		<ul class="products">
+    <li>
+        <a href="#" class="item">
+            <img src="shirt1.gif"/>
+            <div>
+                <p>Balloon</p>
+                <p>Price:$25</p>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="item">
+            <img src="shirt2.gif"/>
+            <div>
+                <p>Feeling</p>
+                <p>Price:$25</p>
+            </div>
+        </a>
+    </li>
+    <!-- other products -->
+</ul>
+
+
+<div class="cart">
+    <h1>Shopping Cart</h1>
+    <table id="cartcontent" style="width:300px;height:auto;">
+        <thead>
+            <tr>
+                <th field="name" width=140>Name</th>
+                <th field="quantity" width=60 align="right">Quantity</th>
+                <th field="price" width=60 align="right">Price</th>
+            </tr>
+        </thead>
+    </table>
+    <p class="total">Total: $0</p>
+    <h2>Drop here to add to cart</h2>
+</div>
+	</body>
+</html>
